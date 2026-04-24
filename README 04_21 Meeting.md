@@ -1,5 +1,34 @@
 # Rhode Island State Senate Redistricting Analysis
 
+Completed in 4/23
+
+* Island handling + population documented (New Shoreham: 1,410, 0.128%)
+* Population deviation justified (±10%, adjusted to 0.30)
+* Ensemble saved (DataFrame + CSV)
+* Histograms with enacted reference lines
+
+To do:
+* Write metric interpretations (distribution, outliers, partisan/minority impact)
+* Add enacted values to box plots
+* Write Latino-majority district analysis
+
+From the FinalProject.ipynb: Saw this Note:
+TODO: Evidence of convergence (that you have run the chain long enough)
+
+What I think we have left to do: 
+1. Project report: OVERLEAF-ONGOING
+2. Outlier histograms: Are we planning on doing a Polsby-Popper .. I think its optional
+3. Evidence of convergence — still a TODO (multi-size histograms exist, no running means, no write-up) 
+4. Explain parameter choices: OVERLEAF-ONGOING 
+5. Marginal box plots: we have, but we still need to do enacted-map overlay missing 
+6. visualizations w/ captions/explanations: need to add captions 
+7. presentation slides
+
+
+------------
+
+
+
 ## Overview
 This project analyzes the fairness of the 2022 Rhode Island State Senate map using ensemble methods with GerryChain. The enacted map is compared against a large set of randomly generated districting plans to evaluate metrics such as partisan outcomes, compactness, and demographic representation.
 
