@@ -215,7 +215,7 @@ Running Mean vs Final Mean
 
 ⸻
 
-4. Population Tolerance
+4. Population Tolerance (Done that part, need to run)
 
 * The population deviation parameter (epsilon) should be:
 
