@@ -172,3 +172,171 @@ This project:
 - Generates an ensemble of districting plans  
 - Compares the enacted map against neutral alternatives  
 - Evaluates fairness using multiple quantitative metrics  
+
+
+
+04.28 RECAP
+
+
+Key Concepts and Requirements
+
+1. Burn-in and Chain Mixing
+
+* The first portion of the Markov chain (approximately the first 10,000 steps) should be treated as burn-in.
+* During burn-in, the chain is not yet well mixed and observations are highly correlated.
+* After this phase, the chain is considered to be sampling from a stable distribution.
+* Analyses and summary statistics should either:
+    * exclude the burn-in period, or
+    * clearly explain its role in the report.
+
+⸻
+
+2. Running Mean vs Final Mean
+
+* Convergence plots should distinguish between:
+    * Running mean (mean up to step t)
+    * Final mean (mean across all steps)
+* Titles and legends should clearly reflect this distinction.
+* Recommended title:
+
+Running Mean vs Final Mean
+
+⸻
+
+3. Convergence Analysis
+
+* Convergence plots must be included and explained.
+* Observations:
+    * Metrics such as cut edges and efficiency gap stabilize over time.
+    * Senate seat counts show very small variation.
+* Explanation:
+    * Rhode Island is strongly Democratic.
+    * Most districts consistently favor the same party, limiting variability.
+
+⸻
+
+4. Population Tolerance
+
+* The population deviation parameter (epsilon) should be:
+
+epsilon = 0.10
+
+* This reflects typical legal standards (±10% deviation).
+* If a higher value (e.g., 0.30) is used, a clear justification must be provided.
+
+⸻
+
+5. Island Connectivity
+
+* Rhode Island includes Block Island, which has population but is geographically disconnected.
+* To ensure a valid dual graph:
+    * the island must be connected to the mainland.
+* This should be briefly mentioned in the report as a Rhode Island–specific preprocessing step.
+
+⸻
+
+6. Scope of Explanation
+
+The report should:
+
+* Focus on interpretation and results
+* Avoid detailed explanations of:
+    * data cleaning steps
+    * Markov chains
+    * ReCom algorithm
+
+These are assumed background knowledge.
+
+⸻
+
+Required Plots and Results
+
+Include the following metrics:
+
+For both elections (Presidential and Senate):
+
+* Cut edges
+* Latino-majority districts
+* Democratic-won districts
+* Efficiency gap
+
+⸻
+
+Include results at:
+
+* 20,000 steps
+* 40,000 steps
+
+This demonstrates convergence and stability of the chain.
+
+⸻
+
+Additional required visuals:
+
+* Convergence plots (running mean vs final mean)
+* Histograms of key metrics
+* Marginal box plots (if included in analysis)
+
+⸻
+
+Interpretation Requirements
+
+Your report should clearly explain:
+
+* Why the first 10,000 steps are treated as burn-in
+* Evidence of convergence across metrics
+* Why Senate seat variation is extremely small
+* The significance of Rhode Island’s political composition
+* The need to connect the island in the dual graph
+
+⸻
+
+Presentation Guidelines
+
+The presentation should emphasize:
+
+* State-specific insights (Rhode Island characteristics)
+* Key findings from plots
+* Clear and concise explanations of results
+
+Focus on:
+
+* Political landscape (strong Democratic bias)
+* Limited variability in outcomes
+* Unique geographic features (island with population)
+
+Avoid:
+
+* General theoretical explanations
+* Repetition of standard methodology
+
+⸻
+
+Tasks to Complete
+
+Code Updates
+
+* Set population tolerance to epsilon = 0.10
+* Ensure histogram bins are appropriate for discrete data
+* Label convergence plots clearly
+
+⸻
+
+Report Updates
+
+* Add explanation of burn-in and convergence
+* Include discussion of small-scale variation in Senate results
+* Mention island connectivity
+* Ensure all plots are clearly labeled and explained
+
+⸻
+
+Final Checks
+
+* Include all required plots for both elections
+* Compare results at 20k and 40k steps
+* Verify that explanations align with visual results
+
+
+
+
