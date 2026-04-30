@@ -1,33 +1,38 @@
 # Rhode Island State Senate Redistricting Analysis
 
-Completed in 4/23
+Ongoing:
+* Project report: OVERLEAF-ONGOING
+* Outlier histograms: Are we planning on doing a Polsby-Popper .. I think its optional ,using cut edges instead
+* Explain parameter choices: OVERLEAF-ONGOING 
+* v*isualizations w/ captions/explanations: need to add captions OVERLEAF-ONGOING
+* presentation slides
 
-* Island handling + population documented (New Shoreham: 1,410, 0.128%)
-* Population deviation justified (±10%, adjusted to 0.30)
-* Ensemble saved (DataFrame + CSV)
-* Histograms with enacted reference lines
 
-To do:
+## TO DO 4/23:
+
+Code updates:
+n/a
+
+Report updates:
 * Write metric interpretations (distribution, outliers, partisan/minority impact)
-* Add enacted values to box plots
-* Write Latino-majority district analysis
+* write Latino-majority district analysis
 
-From the FinalProject.ipynb: Saw this Note:
-TODO: Evidence of convergence (that you have run the chain long enough)
+## To DO 4/29:
 
-What I think we have left to do: 
-1. Project report: OVERLEAF-ONGOING
-2. Outlier histograms: Are we planning on doing a Polsby-Popper .. I think its optional
-3. Evidence of convergence — still a TODO (multi-size histograms exist, no running means, no write-up) (Done?)
-4. Explain parameter choices: OVERLEAF-ONGOING 
-5. Marginal box plots: we have, but we still need to do enacted-map overlay missing (Done)
-6. visualizations w/ captions/explanations: need to add captions 
-7. presentation slides
+Code updates:
+* Go through both ipynb and clean up code/comments 
 
+Report updates:
+* Add explanation of burn-in and convergence  
+* explain running mean vs final mean  
+* explain why Senate variation is very small (tiny scale)  
+* Mention island connectivity  
+* Highlight Rhode Island–specific insights (Dem bias, island)  
+* add plots and ensure they are clearly labeled and explained  
+* add clear captions and explanations for all plots  
 
 ------------
-
-
+# **4/23 Summary**
 
 ## Overview
 This project analyzes the fairness of the 2022 Rhode Island State Senate map using ensemble methods with GerryChain. The enacted map is compared against a large set of randomly generated districting plans to evaluate metrics such as partisan outcomes, compactness, and demographic representation.
@@ -174,8 +179,7 @@ This project:
 - Evaluates fairness using multiple quantitative metrics  
 
 
-
-04.28 RECAP
+# **4/28 Summary**
 
 
 Key Concepts and Requirements
@@ -311,32 +315,6 @@ Avoid:
 * Repetition of standard methodology
 
 ⸻
-
-Tasks to Complete
-
-Code Updates
-
-* Set population tolerance to epsilon = 0.10
-* Ensure histogram bins are appropriate for discrete data
-* Label convergence plots clearly
-
-⸻
-
-Report Updates
-
-* Add explanation of burn-in and convergence
-* Include discussion of small-scale variation in Senate results
-* Mention island connectivity
-* Ensure all plots are clearly labeled and explained
-
-⸻
-
-Final Checks
-
-* Include all required plots for both elections
-* Compare results at 20k and 40k steps
-* Verify that explanations align with visual results
-
 
 
 
