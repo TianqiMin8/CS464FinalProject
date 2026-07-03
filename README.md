@@ -1,5 +1,9 @@
 # AI for Redistricting Analysis of Rhode Island State Senate Districts
 
+<p align="center">
+  <img src="images/RI_map.png" width="700">
+</p>
+
 A computational redistricting project that evaluates the fairness of Rhode Island's 2022 State Senate district map using Markov Chain Monte Carlo (MCMC) sampling and the GerryChain library.
 
 This project generates 40,000 alternative districting plans and compares the enacted map against a statistically neutral ensemble to evaluate partisan fairness, compactness, and minority representation.
