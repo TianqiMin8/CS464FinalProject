@@ -163,37 +163,6 @@ The repository includes visualizations such as:
 
 ---
 
-## Getting Started
-
-### Clone the repository
-
-```bash
-git clone https://github.com/TianqiMin8/CS464FinalProject.git
-cd CS464FinalProject
-```
-
-### Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### Run the notebooks
-
-Preprocess spatial data:
-
-```bash
-jupyter notebook FinalProjectShape.ipynb
-```
-
-Generate the ensemble and analysis:
-
-```bash
-jupyter notebook FinalProjectChain.ipynb
-```
-
----
-
 ## Future Improvements
 
 - Extend the framework to additional U.S. states
