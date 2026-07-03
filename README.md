@@ -53,14 +53,13 @@ Using GeoPandas and MAUP, the raw GIS datasets are cleaned and processed to:
 
 ### 3. Ensemble Generation
 
-Alternative districting plans are generated using:
+Alternative districting plans are generated using GerryChain's ReCom proposal.
 
-- GerryChain
-- ReCom proposal
-- Markov Chain Monte Carlo (MCMC)
-- 40,000 simulation steps
+<p align="center">
+  <img src="images/Redistricting_population_tolerance.png" width="700">
+</p>
 
-The ensemble provides a neutral baseline for comparison.
+The figure illustrates why a relatively large population tolerance (28%) was required due to Rhode Island's precinct granularity.
 
 ### 4. Statistical Analysis
 
@@ -77,12 +76,37 @@ For every generated plan, the project computes:
 
 ## Results
 
-The analysis suggests that:
+### Ensemble Distribution
 
-- The enacted Rhode Island Senate map is **not a partisan outlier**.
-- Democratic seat outcomes fall near the center of the simulated ensemble.
-- The enacted plan is **less compact** than a typical neutral plan.
-- The enacted plan contains **three Latino-majority districts**, slightly above the ensemble average.
+<p align="center">
+  <img src="images/Redistricting_ensemble_distribution.png" width="700">
+</p>
+
+The enacted plan falls near the center of the simulated distribution, indicating that it is not a partisan outlier.
+
+### District Variability
+
+<p align="center">
+  <img src="images/Redistricting_district_variability.png" width="700">
+</p>
+
+Marginal box plots compare the enacted map with the distribution of simulated district vote shares across all generated plans.
+
+### Compactness and Minority Representation
+
+<p align="center">
+  <img src="images/Redistricting_cutedge_minority.png" width="700">
+</p>
+
+The enacted map is less compact than a typical neutral plan while creating slightly more Latino-majority districts than expected.
+
+## Data Processing
+
+<p align="center">
+  <img src="images/Redistricting_island_connectivity.png" width="650">
+</p>
+
+To ensure graph connectivity, Block Island was connected to the mainland by adding a bridge edge before constructing the dual graph.
 
 Overall, the results indicate that the enacted map largely reflects Rhode Island's underlying political geography rather than intentional partisan manipulation.
 
